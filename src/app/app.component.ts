@@ -9,8 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   itemList = new Array<string>();
   onItemAdded(item: string) {
-            console.log(item);
-
-    this.itemList.push(item);
+        this.itemList.push(item);
   }
 }

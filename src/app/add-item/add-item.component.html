@@ -1,9 +1,29 @@
-<div class="text-center pagination-centered"> 
-    
-    Enter an item    
-    <input type="text" #todoItem  >
-    <button (click)="addItem(todoItem.value)" > add </button>
-    <div>
-        {{values}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="well text-center ">
+
+       <!-- 
+                          Enter an item
+   
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button class="btn btn-default" (click)="addItem(todoItem.value)">
+                add
+            </button>
+            </div>
+          </div>
+        </form>
+ -->
+
+        Enter an item
+
+        <input type="text" #todoItem>
+        <button (click)="addItem(todoItem.value)"> add </button> 
+
+      </div>
     </div>
+  </div>
 </div>

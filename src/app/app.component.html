@@ -1,10 +1,37 @@
 <app-my-header></app-my-header>
 <app-add-item (itemAdded)=onItemAdded($event)></app-add-item>
-<!-- <app-item-list ></app-item-list>
- -->
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">your current Todo list</div>
+          <div class="panel-body">
+            <ul>
+              <li *ngFor="let listItem of itemList"> {{listItem}}
+              </li>
+            </ul>
+          </div>
 
- <div>
-     <ul>
-         <li *ngFor="let listItem of itemList" > {{listItem}} </li>
-     </ul>
- </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+<!-- 
+<div class="container">
+  <p> your current Todo list : </p>
+  <br>
+  <div>
+
+  </div>
+  <ul>
+    <li *ngFor="let listItem of itemList"> {{listItem}}
+    </li>
+  </ul>
+</div> -->
