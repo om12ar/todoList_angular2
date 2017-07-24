@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">your current Todo list</div>
+        <div class="panel-body">
+
+          <table id="mytable" class="table table-bordred table-striped">
+
+            <!--  <thead>
+
+              <th><input type="checkbox" id="checkall" /></th>
+              <th>Current Todo List </th>
+
+            </thead> -->
+            <tbody>
+              <tr class="well well-sm" *ngFor="let listItem of itemList">
+                <td>
+                  <input type="checkbox" class="checkthis" /></td>
+                <td #todoItem > {{listItem}} </td>
+                <td>
+                  <button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
+                </td>
+                <td>
+                  <button (click)="deleteItem(todoItem.value)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>
+  $(document).ready(function(){
+$("#mytable #checkall").click(function () {
+        if ($("#mytable #checkall").is(':checked')) {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", true);
+            });
+
+        } else {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", false);
+            });
+        }
+    });
+    
+    $("[data-toggle=tooltip]").tooltip();
+});
+
+</script> -->

@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {
+  TodoListService
+} from './todo-list-service';
+import {
+  Component
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +12,10 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  itemList = new Array<string>();
-  onItemAdded(item: string) {
-        this.itemList.push(item);
-  }
+
+  constructor(private _todolistService: TodoListService) {} 
+  
+  // TODO create service 
+  // TODO create form
+
 }
